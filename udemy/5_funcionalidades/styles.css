@@ -1,0 +1,108 @@
+.btn {
+  background-color: #dddddd;
+  color: #000000;
+  padding: 12px 10px;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.esp-maior, .esp-menor {
+  font-size: 2rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
+}
+
+body {
+  margin: 20px;
+}
+
+.p-esp {
+  color: red;
+  background-color: yellow;
+  padding: 10px;
+  border: 1px solid red;
+}
+.p-esp:hover {
+  color: yellow;
+  background-color: red;
+  border: yellow;
+}
+
+h2 {
+  color: red;
+  background-color: yellow;
+  padding: 10px;
+  border: 1px solid red;
+  border-color: green;
+  color: green;
+}
+h2:hover {
+  color: yellow;
+  background-color: red;
+  border: yellow;
+}
+
+.esp-menor {
+  padding: 10px;
+  margin: 10px;
+  background-color: red;
+  color: white;
+  border: 1px solid red;
+  color: #000000;
+  background-color: #FFFFFF;
+}
+.esp-menor:hover {
+  background-color: white;
+  color: red;
+}
+
+.esp-medio {
+  padding: 15px;
+  margin: 15px;
+  background-color: blue;
+  color: orange;
+  border: 1px solid blue;
+  color: #000000;
+  background-color: pink;
+}
+.esp-medio:hover {
+  background-color: orange;
+  color: blue;
+}
+
+.esp-maior {
+  padding: 25px;
+  margin: 25px;
+  background-color: green;
+  color: white;
+  border: 1px solid green;
+}
+.esp-maior:hover {
+  background-color: white;
+  color: green;
+}
+
+.container-menor {
+  width: 200px;
+  border: 2px dotted green;
+}
+
+.container-maior {
+  width: 400px;
+  border: 3px dashed gold;
+}
+
+.teste-1 {
+  width: 100px;
+  background-color: red;
+}
+
+.teste-2 {
+  width: 500px;
+  background-color: blue;
+}
+
+.teste-3 {
+  width: 40px;
+  background-color: green;
+}/*# sourceMappingURL=styles.css.map */

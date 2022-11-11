@@ -1,0 +1,30 @@
+@import 'variables'
+
+h1
+    color: $text-color
+    border: $border
+
+p
+    color: $text-color
+    border: $border
+    font-size: $main-font
+    margin: #{$mx + 10px}
+
+a
+    color: $text-color
+
+div
+    p
+        // escopo local
+        background-color: $bg-color
+        $font-color: #ffffff
+        $border: 3px dotted green
+        color: $font-color
+        border: $border
+
+h2
+    background-color: $bg-color
+    border: $border
+    // color: $font-color //aqui não pega a cor, por causa do escopo de bloco
+
+

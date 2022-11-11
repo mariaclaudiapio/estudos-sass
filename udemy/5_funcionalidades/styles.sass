@@ -1,0 +1,62 @@
+@import 'variables'
+@import 'button'
+@import 'mixins'
+@import 'function'
+
+%font-pattern
+    font-size: 2rem
+    line-height: 1.5rem
+    text-transform: uppercase
+
+body
+    margin: 20px
+
+.p-esp
+    @include special
+
+h2
+    @include special
+    @include green
+
+.esp-menor
+    @include div(10px, 10px, red)
+    border: 1px solid red
+    @include colors
+    @extend %font-pattern
+
+.esp-medio
+    @include div(15px, 15px, blue, orange)
+    border: 1px solid blue
+    @include colors($background: pink)
+
+.esp-maior
+    @include div(25px, 25px, green)
+    border: 1px solid green
+    @extend %font-pattern
+
+$medida: 4  
+
+.container-menor
+    width: 200px
+    border: custom-border(2)
+
+.container-maior
+    width: 400px
+    border: custom-border(4)
+
+.teste-1
+    width: custom-width()
+    background-color: red
+
+.teste-2
+    width: custom-width($width: 1000px)
+    background-color: blue
+
+.teste-3
+    width: custom-width($division: 5)
+    background-color: green
+
+
+
+
+

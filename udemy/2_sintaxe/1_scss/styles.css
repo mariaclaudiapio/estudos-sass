@@ -1,0 +1,21 @@
+.container {
+  background-color: #eeeeee;
+  padding: 20px;
+}
+.container #title {
+  background-color: #333333;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+}
+
+.container-bottom {
+  background-color: blue;
+  padding: 50px;
+  text-align: center;
+}
+
+p {
+  color: #ffffff;
+  font-size: 40px;
+}/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,25 @@
+@charset "UTF-8";
+/* Este comentário vai aparecer no CSS:
+ *  inclusive, ele aparece em múltiplas linhas! */
+/*! Este comentário aparecerá até mesmo no CSS de compressão. */
+/* Este aqui é um exemplo de interpolação de comentário 4. */
+.container {
+  background: #dddddd;
+  padding: 20px;
+}
+.container #title {
+  background-color: #111111;
+  color: #f1f1f1;
+  padding: 15px;
+  text-align: center;
+}
+
+.container-bottom {
+  background-color: blue;
+  padding: 50px;
+  text-align: center;
+}
+.container-bottom p {
+  color: orange;
+  font-size: 40px;
+}/*# sourceMappingURL=styles.css.map */
