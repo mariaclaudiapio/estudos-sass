@@ -1,62 +1,92 @@
 @import 'variables'
 @import 'button'
 @import 'mixins'
-@import 'function'
+@import 'plugins'
+@import 'functions'
 
-%font-pattern
-    font-size: 2rem
-    line-height: 1.5rem
-    text-transform: uppercase
+// @error 'Este software não está funcionando'
 
 body
     margin: 20px
 
-.p-esp
+.p-esp 
     @include special
 
 h2
     @include special
-    @include green
-
+    
 .esp-menor
-    @include div(10px, 10px, red)
-    border: 1px solid red
+    @include espacamento (10px, 10px)
+    @include custom-border(solid, red)
     @include colors
     @extend %font-pattern
 
 .esp-medio
-    @include div(15px, 15px, blue, orange)
-    border: 1px solid blue
-    @include colors($background: pink)
-
-.esp-maior
-    @include div(25px, 25px, green)
-    border: 1px solid green
+    @include espacamento (15px, 15px)
+    @include custom-border(dotted, blue, 4px)
+    @include colors($background: #321)
     @extend %font-pattern
 
-$medida: 4  
+.esp-maior
+    @include espacamento (25px, 25px)
+    @include custom-border(solid, green)
+    @include colors($background: #336699, $font: #991155)
+
+.esp-maior-ainda
+    $pad: 50px
+    $mag: 50px
+    @include espacamento($pad, $mag)
+    border: 1px solid gold
+    @include colors($font: gold)
+
+$medida: 4
 
 .container-menor
-    width: 200px
-    border: custom-border(2)
+    width: 100px * ($medida / 2)
+    // @include custom-border(solid, green)
+    border: custom-border-function()
 
 .container-maior
-    width: 400px
-    border: custom-border(4)
+    // @include custom-border(solid, red)
+    width: 25rem * $medida
+    border: custom-border-function(2)
+
+.fonte-pequena
+    font-size: 9px
+    color: text-color(9)
+    border: custom-border-function(3)
+
+.fonte-grande
+    font-size: 25px
+    color: text-color(25)
+    border: custom-border-function(485)
 
 .teste-1
     width: custom-width()
-    background-color: red
+    background-color: red 
 
 .teste-2
     width: custom-width($width: 1000px)
-    background-color: blue
-
+    background-color: green
+    
 .teste-3
     width: custom-width($division: 5)
-    background-color: green
+    padding: 20px
+    background-color: calc-func(10, 10)
 
+$fonts: 40px, 60px, 100px
+    
+@each $font in $fonts
+    .title-#{$font}
+        font-size: $font
+        line-height: $font * 1.2
 
-
-
-
+@for $i from 1 through 3
+    .p-#{$i}
+        @if $i == 1
+            color: lightblue
+        @else if $i == 2
+            color: lightgreen
+        @else if $i == 3
+            color: teal
+        background-color: black

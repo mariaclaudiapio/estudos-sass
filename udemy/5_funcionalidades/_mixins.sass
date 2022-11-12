@@ -4,24 +4,20 @@
     padding: 10px
     border: 1px solid red
     &:hover
-        color: yellow
-        background-color: red
-        border: yellow
+        border-color: blue 
+        color: blue
 
-@mixin green
-    border-color: green
+@mixin green 
+    border-color: green 
     color: green
 
-@mixin div($p, $m, $bc, $c: white)
+@mixin espacamento($p, $m)
     padding: $p
     margin: $m
-    background-color: $bc
-    color: $c
-    &:hover
-        background-color: $c
-        color: $bc
 
-@mixin colors($font: #000000, $background: #FFFFFF)
+@mixin custom-border($style, $color, $width: 1px)
+    border: $width $style $color
+
+@mixin colors($font: #000000, $background: #ffffff)
     color: $font
     background-color: $background
-    
