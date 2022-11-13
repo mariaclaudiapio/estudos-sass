@@ -1,0 +1,74 @@
+@use 'sass:map'
+
+// lidando com números
+$a: 10
+
+@debug $a
+@debug $a + 10px
+// @debug 10rem + 10px
+
+//lidando com strings
+$str: 'Roboto'
+$str2: Roboto
+
+@debug $str == $str2
+
+$nome-da-fonte: 'Open'
+$var1: 'Sans'
+$var2: 'Teste'
+
+@debug $nome-da-fonte + ' ' + $var1
+@debug $nome-da-fonte + ' ' + $var2
+
+p
+    font-family: $nome-da-fonte + ' ' + $var1
+
+h1
+    font-family: '#{$nome-da-fonte} #{$var1}'
+
+$h: hidden
+
+h2
+    display: $h
+
+// lidando com cores
+@debug #f2ec44
+@debug blue 
+@debug midnightblue
+@debug rgb(201, 50, 124)
+@debug rgba(123, 231, 144, 0.8)
+@debug hsl(34, 50%, 92%)
+@debug #f5ece0
+
+// lidando com listas
+$list: 10, 20, 30
+
+@each $value in $list
+    @debug $value
+
+@each $font in $list
+    .p-#{$font}
+        font-size: $font + 'px'
+
+// lidando com maps
+$font-weights: ('regular': 400, 'bold': 700, 'black': 900)
+
+h3
+    font-weight: map.get($font-weights, 'black')
+
+@each $key, $value in $font-weights
+    .p-#{$key}
+        font-weight: $value
+
+// lidando com booleanos
+@debug true 
+@debug false
+
+@debug 10 > 2
+
+@if 10 < 2
+    p
+        color: red 
+@else
+    p
+        color: blue

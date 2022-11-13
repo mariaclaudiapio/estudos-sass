@@ -1,0 +1,19 @@
+#navbar {
+  padding: 10px;
+  border-bottom: 2px solid #ffffff;
+  margin-bottom: 15px;
+}
+#navbar ul {
+  display: flex;
+  justify-content: flex-end;
+}
+#navbar ul li {
+  margin: 0 10px;
+}
+#navbar ul li a {
+  color: #ffffff;
+  transition: 0.5s;
+}
+#navbar ul li a:hover {
+  color: #af8a0e;
+}/*# sourceMappingURL=layouts.css.map */
